@@ -1,0 +1,190 @@
+body{
+	font-family: 'Comfortaa', sans-serif; 
+	background-color: #fff7e6;
+	margin-top: 5%;
+	height: auto;
+	/* margin-bottom: 20px */
+  }
+
+a:visited{
+	color: darkblue;
+	text-decoration: none;
+}
+
+nav {
+	/* position: sticky; */
+	min-width: 100px;
+	max-width: 180px;
+	/* margin: 0 auto; */
+	top: 0px;
+	z-index: 1;
+	background: lightsalmon;
+	font-weight: bold;
+	color: darkblue;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+header{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+}
+
+
+.active{
+	background-color: salmon;
+	border:lightyellow 5px dashed;
+	border-radius: 10px;
+    text-transform: uppercase;
+	text-align: center;
+	padding: 0 10px 0 10px;
+	min-width: 150px;
+	max-width: 150px;
+}
+
+li{
+	text-align: center;
+}
+
+.home{
+	background-image: url("../images/background_gif.gif"); 
+	background-size: cover;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+.container{
+	margin: 5% 0 5% 0;
+	display: grid;
+	grid-template-columns: 5px auto 5px;
+	grid-template-rows: 0.5fr 1fr 1fr;
+  	column-gap: 5px;
+	row-gap: 15px;
+}
+
+p, h1, h2 {
+    padding: 10px;
+}
+
+.fox{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	left: 0;
+}
+
+#gif{
+	animation: mymove 5s infinite alternate;
+}
+  
+@keyframes mymove{
+	from {margin-left: 0%;}
+	to {margin-left: 67%}
+  }
+
+.text{
+	font-weight: 100;
+	background-color: rgba(255, 255, 255, .8);
+	text-align: center;
+	border-radius: 20px;
+	border: 3px solid navy;
+}
+
+.about{
+	grid-row: 2;
+	grid-column: 2;
+  }
+
+.description{
+	grid-row: 3;
+	grid-column: 2;
+}
+
+img{
+	margin: 12px;
+	/* padding: 5px; */
+	border: 5px solid lightpink;
+	width: 30%;
+	height: auto;
+	justify-items: center;
+	/* height: auto; */
+	border-radius: 25px;
+	grid-row: 1;
+	grid-column: 2;
+	
+}
+
+img:hover{
+	filter: grayscale();
+	border: 5px dashed grey;
+	transform: scale(1.05);
+}
+
+img:nth-child(even){
+	border:lightskyblue dashed 5px;
+}
+
+img.pikachu{
+	border: hidden;
+	width: 10%;
+	position:absolute;
+	animation: pikachuu 1s infinite alternate;
+}
+
+@keyframes pikachuu{
+	from {left:-100px;}
+	to {left:0px;}
+}
+
+/* I don't know how to make elements of my form to appear in the next line e.g. "Your Email"
+on the next line. In class we used style and input display block I'm not sure how to do it in CSS just for the form and not others*/
+form{
+	display:block;
+	align-self:center
+}
+
+fieldset{
+	color: white;
+	margin-bottom: 5%;
+	font-size: 75%;
+	
+}
+
+.pikarun{
+	overflow: hidden;
+}
+
+img.pikarun{
+	border: hidden;
+	margin: 0px;
+	/* width: 10%; */
+	/* position:absolute; */
+	animation: pikarunning 5s infinite;
+}
+
+@keyframes pikarunning{
+	from {transform: translateX(-200px);}
+	to {transform: translateX(550px);}
+}
+
+footer{
+	background-color: black;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	font-size: 25%;
+	/* position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0; */
+}
